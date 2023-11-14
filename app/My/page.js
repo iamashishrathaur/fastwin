@@ -1,9 +1,11 @@
 import React from 'react'
-
+import Nav from '@/Components/Nav'
 const page = () => {
+
   return (
     
     <>
+    <Nav/>
     <section id='myNav'> 
     <div id='blue'></div>
     <div id='white'></div>
@@ -11,7 +13,7 @@ const page = () => {
 
    <section id='profile'>
    <div id='myProfile'>
-      <i class='user bx bxs-user-circle'></i>
+      <i className='user bx bxs-user-circle'></i>
       <div id='data'>
       <h2>Ashish</h2>
       <div id='id'>
@@ -20,7 +22,7 @@ const page = () => {
       </div>
       </div>
 
-      <i class='alert bx bx-error-circle'></i>
+      <i className='alert bx bx-error-circle'></i>
    <div id='myProfileButton'>
     <button>Change Nick Name</button>
     <button>Change Password</button>
@@ -32,18 +34,18 @@ const page = () => {
 
    <section className='myList'>
     <div id='orderRecord'>
-    <i class='icon1 bx bx-food-menu'></i>
+    <i className='icon1 bx bx-food-menu'></i>
      <span>Order Record</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
    
    <div className='brackLine'></div>
    <section className='myList'>
    <div id='financialDelails'>  
-   <i class='icon1 bx bx-rupee'></i>
+   <i className='icon1 bx bx-rupee'></i>
      <span>Financial Delails</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
 
@@ -51,9 +53,9 @@ const page = () => {
 
    <section className='myList'>
     <div id='download'>
-     <i class='icon1 bx bx-cloud-download'></i>
+     <i className='icon1 bx bx-cloud-download'></i>
      <span>Download</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
 
@@ -61,9 +63,9 @@ const page = () => {
 
    <section className='myList'>
    <div id='followUs'>
-   <i class='icon1 bx bxl-twitter' ></i>
+   <i className='icon1 bx bxl-twitter' ></i>
      <span>Follow us</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
 
@@ -71,9 +73,9 @@ const page = () => {
 
    <section className='myList'>
   <div id='support'>
-  <i class='icon1 bx bx-support' ></i>
+  <i className='icon1 bx bx-support' ></i>
      <span>Support</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
 
@@ -81,9 +83,9 @@ const page = () => {
 
    <section className='myList'>
     <div id='complaint'> 
-    <i class='icon1 bx bx-conversation'></i>
+    <i className='icon1 bx bx-conversation'></i>
      <span>Complaint</span>
-     <i class='icon2 bx bx-chevron-right'></i>
+     <i className='icon2 bx bx-chevron-right'></i>
      </div>
    </section>
 

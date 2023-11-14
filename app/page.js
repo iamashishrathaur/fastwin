@@ -1,9 +1,26 @@
-'use client'
+"use client"
 import React from 'react'
+import Nav from '@/Components/Nav'
+import { useRouter } from 'next/navigation';
 const page = () => {
-
+  const routes=useRouter()
+  const Recharge = () => {
+    routes.push('/Recharge');
+    //push, replace, and back
+  };
+  const Withdraw = () => {
+    routes.push('/Withdraw');
+    //push, replace, and back
+  };
+  const taskReward=()=>{
+    routes.push("/TaskReward")
+  }
+  const checkIn=()=>{
+    routes.push("/CheckIn")
+  }
   return (
    <>
+   <Nav/>
    <section id='HomeTop'>
      <div>
      <h4>Balance</h4>
@@ -11,27 +28,27 @@ const page = () => {
       <h5>ID:12345</h5>
      </div>
      <div id='button'>
-      <button>Recharge</button>
-      <button>Withdraw</button>
+      <button onClick={Recharge}>Recharge</button>
+      <button onClick={Withdraw}>Withdraw</button>
      </div>
    </section>
    
    <section id='HomeReward'>
-     <div>
-       <div className='image1'><i class='bx bxs-gift'></i></div>
+     <div onClick={taskReward}>
+       <div className='image1'><i className='bx bxs-gift'></i></div>
        <h4>Task reward</h4>
      </div>
-     <div>
-       <div className='image2'><i class='bx bxs-calendar-check'></i></div>
+     <div onClick={checkIn}>
+       <div className='image2'><i className='bx bxs-calendar-check'></i></div>
        <h4>Check in</h4>
      </div>
    </section>
    <section id='HomeReferBanner'>
     <img src='https://fastwin.app/includes/images/refer_bn.svg'></img>
    </section>
-
+ 
    <section id='HomeGame'>
-    <img src='https://fastwin.app/includes/images/fast-parity.jpg'/>
+    <img src='https://fastwin.app/includes/images/fast-parity.jpg' />
     <img src='https://fastwin.app/includes/images/parity.jpg'/>
     <img src='https://fastwin.app/includes/images/sapre.jpg'/>
     <img src='https://fastwin.app/includes/images/dice.jpg'/>

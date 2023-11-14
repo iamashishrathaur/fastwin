@@ -1,5 +1,6 @@
+@import url("https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css");
 ::-webkit-scrollbar{
-  width: 0px !important ; 
+  width: 0 !important ; 
   scrollbar-width: none;
   background: transparent;
   overflow-y: scroll; 
@@ -62,25 +63,24 @@ body {
   z-index: 990;
 
 }
-
-
 .navbar .link{
   align-items: center;
   display: flex;
   flex-direction: column;
-  
   margin: 0 40px 0 40px;
   text-decoration: none;
-  color: #0093FF;
+  color: #89CDFF;
 }
 
 .navbar .link i{
-  font-size: 2.0rem;
+  font-size: 2.2rem;
 }
 .navbar .link span{
   font-size: 0.7rem;
 }
-
+.navbar .active{
+  color: #0093FF;
+}
 
  /* Home page */
 
@@ -206,12 +206,19 @@ body {
   align-items: center;
   color: white;
   background-color: #0093FF;
-  justify-content: space-between;
-  padding: 0 20px 0 20px;
+  justify-content: center;
  }
  #rechargeNav h4{
+  position: absolute;
+  left: 15px;
   font-size: 14px;
-    font-weight: 500;
+  font-weight: 500;
+ }
+ #rechargeNav h5{
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  font-weight: 500;
  }
  #rechargeNav h3{
     font-size: 18px;
@@ -457,8 +464,339 @@ width: 100%;
   color: #666666;
   text-decoration: underline;
 }
+/*  Withdraw page */
+#withdrawNav{
+  position: fixed;
+  width: 480px;
+  top: 0;
+  display: flex;
+  height: 45px;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0093FF;
+}
+#withdrawNav i{
+  position: absolute;
+  left: 0;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#withdrawNav h4{
+  position: absolute;
+  font-size: 14px;
+  right: 15px;
+  font-weight: 500;
+ }
+ #withdrawNav h3{
+   position: absolute;
+    justify-content:center ;
+   text-align: center;
+   justify-content: center;
+   font-size: 18px;
+   font-weight: 500;
+ }
+ #withdrawBal{
+  margin-top: 60px;
+  align-items: center;
+  text-align: center;
+}
+
+#withdrawBal span{
+  color: #959EA6;
+}
+#withdrawBal h2{
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+ #bankCard{
+  background-color: #EBF7FF;
+  height: 110px;
+  border-radius: 6px;
+  margin: 20px;
+  border: 1px solid #CFEAFE;
+ }
+ #bankCard div{
+  text-align: center;
+   background: #0093FF;
+   width: 70px;
+   padding: 1px;
+   color: white;
+   font-weight: bold;
+   font-size: 17px;
+   border-radius: 5px;
+   text-transform: uppercase;
+ }
+ 
+#withdrawInput {
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#withdrawInput h4{
+  margin-bottom: 15px;
+}
+#withdrawInput span{
+  font-size: 30px;
+}
+#withdrawInput input{
+  margin-left: 10px;
+  font-size: 40px;
+   border: 0;
+   height: 40px;
+   width: 70%;
+   outline: none;
+
+}
+
+#withdrawInput hr{
+  margin-top: 10px;
+  border: none;
+  height: 2px;
+  border-radius: 8px;
+  background: #CCCCCC;
+}
+
+#withdrawTerm{
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+  padding-inline: 20px;
+  margin-bottom: 20px;
+}
+
+#withdrawTerm .term{
+  display: flex;
+  justify-content: space-between;
+}
+
+#withdrawTerm .term p{
+  color: #979797;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#withdrawButton{
+  background: #0093FF;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  margin: auto;
+  width: 90%;
+  margin: auto;
+  height: 48px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/*  Reward page */
+
+#rewardNav{
+  position: fixed;
+  width: 480px;
+  top: 0;
+  display: flex;
+  height: 45px;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #0093FF;
+}
+#rewardNav i{
+  position: absolute;
+  left: 0;
+  font-size: 35px;
+  font-weight: 500;
+}
+#rewardNav h3{
+  position: absolute;
+  justify-content:center ;
+ text-align: center;
+ letter-spacing: 1px;
+ justify-content: center;
+ font-size: 18px;
+ font-weight: 500;
+
+}
+#welcomeReward{
+  letter-spacing: 0.5px;
+  background-color: #F9FCFF;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px;
+  margin-top: 55px;
+  border: 1px solid #CFEAFE;
+}
+#welcomeReward #top{
+  padding: 5px 0 5px 0;
+  justify-content: space-between;
+  display: flex;
+}
+#welcomeReward #top h4{
+  font-size: 15px;
+}
+#welcomeReward #top h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+#welcomeReward #mid{
+  border: 2px solid #ECECEC;
+  border-radius: 10px;
+}
+#welcomeReward #mid div{
+  background: #0093FF;
+  height: 15px;
+  border-radius: 10px;
+  width: 10%;
+  animation: progressBar 1s linear;
+  animation-fill-mode:both; 
+}
+#welcomeReward #bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#welcomeReward #bottom p{
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+#welcomeReward #bottom button{
+  margin-top: 5px;
+font-size: 16px;
+letter-spacing: 0.5;
+font-weight: 500;
+color: white;
+background: #CECECE;
+outline: none;
+border: none;
+border-radius: 10px;
+  width: 120px;
+  height: 38px;
+}
+#rechargeReward{
+  background-color: #F9FCFF;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 15px;
+  border: 1px solid #CFEAFE;
+}
+#rechargeReward #top{
+  padding: 5px 0 5px 0;
+  justify-content: space-between;
+  display: flex;
+}
+#rechargeReward #top h4{
+  font-size: 15px;
+}
+#rechargeReward #top h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+#rechargeReward #mid{
+  border: 2px solid #ECECEC;
+  border-radius: 10px;
+}
+#rechargeReward #mid div{
+  background: #0093FF;
+  height: 15px;
+  border-radius: 10px;
+  width: 10%;
+  animation: progressBar 1s linear;
+  animation-fill-mode:both; 
+}
+#rechargeReward #bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#rechargeReward #bottom p{
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+#rechargeReward #bottom button{
+  margin-top: 5px;
+font-size: 16px;
+letter-spacing: 0.5;
+font-weight: 500;
+color: white;
+background: #CECECE;
+outline: none;
+border: none;
+border-radius: 10px;
+  width: 120px;
+  height: 38px;
+}
+#dailyReward{
+  background-color: #F9FCFF;
+  border-radius: 6px;
+  margin: 15px;
+  border: 1px solid #CFEAFE;
+  padding: 15px;
+}
+#dailyReward #top{
+  padding: 5px 0 5px 0;
+  justify-content: space-between;
+  display: flex;
+}
+#dailyReward #top h4{
+  font-size: 15px;
+}
+#dailyReward #top h3{
+  font-size: 16px;
+  font-weight: bold;
+}
+#dailyReward #mid{
+  border: 2px solid #ECECEC;
+  border-radius: 10px;
+}
+#dailyReward #mid div{
+  background: #0093FF;
+  height: 15px;
+  border-radius: 10px;
+  width: 10%;
+  animation: progressBar 1s linear;
+  animation-fill-mode:both; 
+}
+#dailyReward #bottom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#dailyReward #bottom p{
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+#dailyReward #bottom button{
+  margin-top: 5px;
+font-size: 16px;
+letter-spacing: 0.5;
+font-weight: 500;
+color: white;
+background: #CECECE;
+outline: none;
+border: none;
+border-radius: 10px;
+  width: 120px;
+  height: 38px;
+}
 
 
+@keyframes progressBar {
+  0% { width: 10%; }
+  100% { width: 100%; }
+}
 
 @media screen and (max-width:767px){
   body {
@@ -491,6 +829,12 @@ width: 100%;
    }
   #myNav #blue {
        width: 100%;
+}
+#withdrawNav{
+  width: 100%;
+}
+#rewardNav{
+  width: 100%;
 }
  }
 
