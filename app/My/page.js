@@ -1,7 +1,10 @@
+"use client"
 import React from 'react'
 import Nav from '@/Components/Nav'
 const page = () => {
-
+ function download(){
+  window.open("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg")
+ }
   return (
     
     <>
@@ -52,7 +55,7 @@ const page = () => {
    <div className='brackLine2'></div>
 
    <section className='myList'>
-    <div id='download'>
+    <div id='download' onClick={download}>
      <i className='icon1 bx bx-cloud-download'></i>
      <span>Download</span>
      <i className='icon2 bx bx-chevron-right'></i>
