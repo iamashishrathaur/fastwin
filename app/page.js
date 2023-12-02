@@ -1,9 +1,34 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from '@/Components/Nav'
 import { useRouter } from 'next/navigation';
+import axios from 'axios';
+
 const page = () => {
   const routes=useRouter()
+  const [isAuth, setIsAuth] = useState(false);
+  axios.defaults.withCredentials=true
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:1000');
+        if (response.data.status === "Success") {
+          setIsAuth(true);
+         
+        }else{
+          setIsAuth(false);
+          routes.push('/Login')
+          
+        }
+      } catch (error) {
+        setIsAuth(false);
+        routes.push('/Login')
+      }
+    };
+    fetchData();
+  }, []); 
+
+ 
   const Recharge = () => {
     routes.push('/Recharge');
     //push, replace, and back
@@ -19,9 +44,11 @@ const page = () => {
     routes.push("/CheckIn")
   }
   return (
-   <>
-   <Nav/>
-   <section id='HomeTop'>
+    
+    <>
+   {isAuth && ( <div>
+    <Nav/>
+    <section id='HomeTop'>
      <div>
      <h4>Balance</h4>
       <h2>₹234.00</h2>
@@ -59,8 +86,10 @@ const page = () => {
     <img src='https://fastwin.app/includes/images/ludo.png'/>
     <img/>
    </section>
+   
+   </div> )}
+   
    </>
   )
 }
-
-export default page
+export default page;

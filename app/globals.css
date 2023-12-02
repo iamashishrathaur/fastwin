@@ -999,6 +999,25 @@ border-radius: 10px;
   color: #0093FF;
 }
 
+/* Login page */
+
+#logButton{
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logButton button{
+  width:48%;
+  padding: 15px;
+  color: #0093FF;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #0093FF;
+  background: white;
+  cursor: pointer;
+}
 @keyframes progressBar {
   0% { width: 10%; }
   100% { width: 100%; }
@@ -1061,7 +1080,7 @@ border-radius: 10px;
 
 /* popup */
 
-#popup-window {
+/* #popup-window {
   position: fixed;
   width: 300px;
   height: 200px;
@@ -1075,4 +1094,22 @@ border-radius: 10px;
   left: 0;
   z-index: 10;
   display: flex;
-}  
+}   */
+
+.toast-message {
+  margin: auto;
+  background: rgba(0, 0, 0, 0.694) !important;
+  color: #fff !important;
+  font-size: 20px !important;
+  width: 250px !important;
+  font-size: 13px !important;
+  padding: 10px 20px !important;
+  border-radius: 5px !important;
+  letter-spacing: 0.6px !important;
+  word-spacing: 4px !important;
+}
+.Toastify__toast-container--bottom-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
