@@ -64,6 +64,7 @@ body {
 
 }
 .navbar .link{
+  transition: 0.2s;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -72,14 +73,13 @@ body {
   color: #89CDFF;
 }
 
-.navbar .link i{
-  font-size: 2.2rem;
+.navbar .link .nav__icon{
+  background-size: contain;
+  width: 30px;
+  height: 30px;
 }
 .navbar .link span{
   font-size: 0.7rem;
-}
-.navbar .active{
-  color: #0093FF;
 }
 
  /* Home page */
@@ -311,9 +311,170 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+/* Invite page */
+#inviteNav{
+z-index: 99;
+height: 150px;
+width: 100%;
+}
+#inviteNav #blue{
+  z-index: 99;
+  position: fixed;
+  width: 480px;
+  top: 0;
+  background: #0093FF;
+  height: 70px;
 
+}
+#inviteNav #white{
+  z-index: 99;
+  position: fixed;
+  width: 480px;
+  top: 70px;
+  background: white;
+  height: 55px;
+}
 
+#inviteWithdraw{
+  z-index: 99;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  top: 8px;
+  position: fixed;
+  left: 0;
+  justify-content: center;
+}
+#inviteWithdraw #withdraw{
+  position: relative;
+  border-radius: 3px;
+  height: 100px;
+  width: 460px;
+  background-color: #F9FCFF;
+  border: 1px solid #D0EBFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
 
+}
+#inviteWithdraw #withdraw .container{
+  display: flex;
+  flex-direction: column;
+}
+#inviteWithdraw #withdraw .container span{
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #979797;
+}
+#inviteWithdraw #withdraw .container h2{
+  font-size: 28px;
+  font-family: sans-serif;
+  color: #383b45;
+}
+#inviteWithdraw #withdraw .container button{
+  background: #0760A1;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+#inviteContainer{
+  /* z-index: 1000; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top:-30px;
+  background: white;
+  height: 60px;
+}
+#inviteContainer span{
+  color: #666666;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+#inviteContainer #line{
+  background: #BABABA;
+  height: 30px;
+  width: 1px;
+}
+
+  #inviteDetails{
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #inviteDetails .details{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #inviteDetails .details span{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #979797;
+    padding: 5px;
+  }
+  #inviteDetails .details h1{
+    padding: 5px;
+  }
+  #inviteDetails .details .box{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+  }
+  #inviteDetails .details .box span:nth-child(1){
+    font-size: 12px;
+  }
+  #inviteDetails .details .box span:nth-child(2){
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+  }
+  #inviteDetails .details .box span:nth-child(3){
+    background: url(/goRight.png);
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+  }
+#inviteRecord #recordTxt{
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #inviteRecord #recordTxt h3{
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    font-weight: 500;
+   color: #383b45;
+}
+#inviteRecord #recordTxt span{
+  letter-spacing: 0.5px;
+  color: #979797;
+  font-size: 14px;
+}
+#inviteRecord #recordData{
+  display: flex;
+  /* flex-direction: column; */
+  width: 100%;
+  max-height: 100%;
+  justify-content: center;
+}
+#inviteRecord #recordData #data{
+  font-size: 14px;
+  color: #979797;
+}
 /* My page */
 #myNav{
   z-index: 99;
@@ -807,11 +968,15 @@ border-radius: 10px;
   color: white;
   background-color: #0093FF;
 }
-#checkNav i{
+#checkNav span{
   position: absolute;
-  left: 0;
-  font-size: 35px;
-  font-weight: 500;
+  left: 5px;
+  height: 18px;
+  width: 32px;
+  background: url(/back_wt.png) no-repeat center;
+  background-size: contain;
+  display: block;
+  cursor: pointer;
 }
 #checkNav h3{
   position: absolute;
@@ -1107,7 +1272,18 @@ border-radius: 10px;
   #rechargeInput {
   padding: 10px;
 }
-
+#inviteNav{
+  width: 100%;
+}
+#inviteNav #blue {
+  width: 100%;
+}
+#inviteWithdraw{
+  width: 100%;
+}
+#inviteWithdraw #withdraw{
+  width: 100%;
+}
   #profile {
     width: 100%;
     display: flex;

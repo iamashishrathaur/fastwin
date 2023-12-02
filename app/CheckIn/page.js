@@ -11,7 +11,7 @@ const page = () => {
   return (
     <>
     <section id='checkNav'>
-      <i className='bx bx-chevron-left' onClick={back}></i>
+      <span onClick={back}></span>
       <h3>Check In</h3>
     </section> 
     <section id='checkBody'>
