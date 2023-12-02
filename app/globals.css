@@ -823,6 +823,7 @@ border-radius: 10px;
  font-weight: 500;
 }
 #checkBody{
+  position: relative;
   background-image: linear-gradient(#0093FF 1%, #2A4C67, #1569A6,white);
   width: 100%;
   height: 100%;
@@ -831,7 +832,10 @@ border-radius: 10px;
   padding-top: 20px;
 }
 #checkBody #checkBox{
-  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #f9fcff ;
   height: 290px;
   border-radius: 5px;
   margin-bottom: 30px;
@@ -850,6 +854,71 @@ border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+#checkBody #checkBox .check-row{
+  width: 100%;
+  height: 100px;
+  margin-top: 1.5rem!important;
+  display: flex;
+  flex-direction: row;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-direction: column;
+  text-align: center;
+}
+#checkBody #checkBox .check-row .day{
+  color: #000;
+  width: 100%;
+  height: 10px;
+  justify-content: space-around;
+  display: flex;
+  padding-bottom: 0.5rem!important;
+  font-size: 16px;
+}
+#checkBody #checkBox .check-row .coin{
+  justify-content: space-around;
+  display: flex;
+}
+#checkBody #checkBox .check-row .money{
+  padding-top: 0.5rem!important;
+  padding-bottom: 0.5rem!important;
+  font-size: 18px;
+  font-weight: 600;
+  color: #979797;
+  justify-content: space-around;
+  display: flex;
+}
+#checkBody #checkBox .check-row .coin span{
+  height: 40px;
+  width: 40px;
+  background: url(/Coin.png) no-repeat;
+  background-size: cover;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#checkBody #checkBox .check-button{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 22px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+#checkBody #checkBox .check-button button{
+   outline: none;
+   border: none;
+   font-weight: 700;
+   font-size: 17px;
+   border-radius: 50px;
+   background: #FFC71C;
+   padding: 10px 40px;
+   color: #fff;
+   background: #cecece;
+   transition: transform .1s;
 }
 
 
