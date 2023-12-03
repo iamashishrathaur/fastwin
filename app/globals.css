@@ -8,9 +8,16 @@
   -ms-overflow-style: none;
 }
 
-::selection {
-  background-color: transparent; /* Set the background color to transparent */
-}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  -webkit-user-select: none; /* Safari/Chrome */
+   /* Disable pointer events to prevent right-click copy */
+} 
 
 a,Link,button,input{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
@@ -27,12 +34,6 @@ a,Link,button,input{
   margin: auto;
   width: 96%;
   height: 1px;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html{
